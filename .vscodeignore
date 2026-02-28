@@ -1,0 +1,13 @@
+.vscode/**
+.git/**
+node_modules/**
+src/**
+tsconfig.json
+tsconfig.node.json
+tsconfig.app.json
+vite.config.ts
+eslint.config.js
+index.html
+.env
+.agent/**
+**/package-lock.json
