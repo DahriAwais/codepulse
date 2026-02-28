@@ -1,0 +1,57 @@
+/* ──────────────────────────────────────────────────────────
+   index.css  –  Global Design Tokens
+────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg: #080d17;
+  --surface: #111827;
+  --surface2: #1a2235;
+  --border: rgba(255, 255, 255, 0.07);
+  --blue: #2d7eff;
+  --cyan: #00f2fe;
+  --red: #ff2d55;
+  --amber: #ffb800;
+  --green: #00e5a0;
+  --purple: #8b5cf6;
+  --txt: #f1f5f9;
+  --muted: #64748b;
+  --font: 'Outfit', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--txt);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* scrollbars */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}

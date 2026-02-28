@@ -1,0 +1,74 @@
+{
+  "name": "codepulse",
+  "displayName": "CodePulse | Engineering Intelligence",
+  "description": "Premium AI-powered code analysis and pull request reviewer",
+  "version": "1.0.0",
+  "publisher": "antigravity",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:codepulse-view"
+  ],
+  "main": "./dist-extension/extension.js",
+  "icon": "public/vite.svg",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "codepulse",
+          "title": "CodePulse",
+          "icon": "public/sidebar-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "codepulse": [
+        {
+          "id": "codepulse-view",
+          "type": "webview",
+          "name": "CodePulse Dashboard"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "codepulse.analyze",
+        "title": "CodePulse: Run Analysis"
+      }
+    ]
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build-extension": "tsc src/extension.ts --outDir dist-extension --module commonjs --target es2020 --lib es2020 --skipLibCheck",
+    "compile": "npm run build && npm run build-extension",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "framer-motion": "^12.34.3",
+    "jspdf": "^4.2.0",
+    "lucide-react": "^0.575.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "@types/node": "^22.10.1",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/vscode": "^1.90.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.15.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "globals": "^15.12.0",
+    "typescript": "~5.6.2",
+    "typescript-eslint": "^8.15.0",
+    "vite": "^6.0.1"
+  }
+}
