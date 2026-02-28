@@ -14,7 +14,7 @@
     "onView:codepulse-view"
   ],
   "main": "./dist-extension/extension.js",
-  "icon": "public/vite.svg",
+  "icon": "public/icon.png",
   "contributes": {
     "viewsContainers": {
       "activitybar": [
